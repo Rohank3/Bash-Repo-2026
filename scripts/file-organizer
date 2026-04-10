@@ -15,4 +15,16 @@ fi
 # Then, create a 'Documents' folder and move all .txt and .pdf files.
 # Hint: use `mkdir -p` and `mv`.
 
+# Create folders
+mkdir -p "$DIR/Images"
+mkdir -p "$DIR/Documents"
+
+# Move image files
+mv "$DIR"/*.jpg "$DIR/Images" 2>/dev/null
+mv "$DIR"/*.png "$DIR/Images" 2>/dev/null
+
+# Move document files
+mv "$DIR"/*.txt "$DIR/Documents" 2>/dev/null
+mv "$DIR"/*.pdf "$DIR/Documents" 2>/dev/null
+
 echo "Organization complete!"
