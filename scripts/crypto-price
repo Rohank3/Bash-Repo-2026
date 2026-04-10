@@ -17,3 +17,6 @@ echo "Fetching price for $COIN..."
 # Use `grep`, `sed`, `awk`, or `jq` (if installed) to extract just the exact price number.
 # Print the output in this format: "Current price of $COIN is: $X.XX"
 
+PRICE=$(curl -s "$API_URL" | grep -oP '"price":"\K[^"]+')
+
+echo "Current price of $COIN is: $PRICE"
